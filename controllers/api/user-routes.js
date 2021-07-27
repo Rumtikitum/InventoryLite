@@ -1,22 +1,18 @@
 const router = require('express').Router();
 const { User } = require('../../models');
-
 // GET /api/users
 router.get('/', (req, res) => {
     // Access our User model and run .findAll () method
     User.findAll()
-        attributes: { exclude: ['password'] }
-})
     .then (dbUserData => res.json (dbUserData))
     .catch (err =>{
         console.log (err);
         res.status (500).json (err);
-    });
-
+    })
+});
 // GET /api/users/1
 router.get('/:id', (req, res) => {
     User.findOne({
-        attributes: { exclude: ['password'] };
         where: {
             id: req.params.id
             }
@@ -33,7 +29,6 @@ router.get('/:id', (req, res) => {
                 re.status(500).json(err);
             });
         });
-
 // POST /api/users
 router.post('/', (req, res) => {
     // expects Username/Email/PW
@@ -48,11 +43,9 @@ router.post('/', (req, res) => {
             res.status(500).json(err);
         });
     });
-
 // PUT /api/users/1
 router.put('/:id', (req, res) => {
     // expects Username Email and DB_PW
-
     //if req.body has exact key/value pairs to match use 'req.body'
     User.update(re.body,{
         where: {
@@ -71,7 +64,6 @@ router.put('/:id', (req, res) => {
         res.status(500).json(err);
     });
 });
-
 // DELETE /api/users/1
 router.delete('/:id', (req, res) => {
     User.destroy ({
@@ -91,5 +83,4 @@ router.delete('/:id', (req, res) => {
     res.status(500).json(err);
 });
 });
-
 module.exports = router;
