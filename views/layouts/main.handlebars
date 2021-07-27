@@ -5,14 +5,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FullyStocked</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link href="/public/stylesheets/style.css" rel="stylesheet" />
   </head>
 
   <body>
     <div class="wrapper">
       <header>
-        <h1>
-          <a href="/">FullyStocked</a>
+        <h1 id="forecast" class="row justify-content-center p-3 mb-2 bg-primary text-white">
+          <a>FullyStocked</a>
         </h1>
       <nav>
         {{#if loggedIn}}
