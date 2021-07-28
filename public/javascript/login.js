@@ -1,6 +1,8 @@
+//Login Logic....Copy
 async function loginFormHandler(event) {
     event.preventDefault();
   
+    //querySelector...pulling id's
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
   
@@ -24,7 +26,7 @@ async function loginFormHandler(event) {
   
   async function signupFormHandler(event) {
     event.preventDefault();
-  
+  //sign up logic...query selector corresponding to #id's
     const username = document.querySelector('#username-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
@@ -47,7 +49,7 @@ async function loginFormHandler(event) {
       }
     }
   }
-  
+  //listening for submit button on login page
   document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
   
   document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
