@@ -1,0 +1,38 @@
+/**Navigation Bar Qualities....Teal Bar, White Letters, and changes to black when hovered over. Contact button will be emphasized with black always*/
+.container-1 .navbar {
+    margin: 0;
+    padding: 0;
+    background: teal;
+    border-bottom: goldenrod solid 5px;
+}
+  
+  .navbar li {
+    list-style: none;
+
+    display: inline-block;
+  }
+  
+  .navbar a {
+    list-style: none;
+
+    display: block;
+    color: white;
+    text-align: center;
+    float: center;
+    width: 150px;
+    padding: 25px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .navbar .right {
+    float: right;
+    background: #1f1f2e;
+  }
+
+
+  /*Change the link color to #111 (black) on hover*/
+  .navbar a:hover {
+    background-color: #1f1f2e;
+  }

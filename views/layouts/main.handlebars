@@ -19,25 +19,33 @@
         <h1 id="forecast" class="row justify-content-center p-3 mb-2 bg-primary text-white">
           <a>FullyStocked</a>
         </h1>
-      <nav>
+
+    <nav class="container-1">
+        <ul class="navbar">
         {{#if loggedIn}}
-        <a href="/">home</a>
-        <a href="/dashboard">dashboard</a>
-        <a href="/search">search</a>
-        <a href="/edit">edit</a>
-        <a href="/delete">delete</a>
-        <button id="logout" class="btn-no-style">logout</button>
+          <li>
+            <a href="/">home</a>
+          </li>
+          <li>
+            <a href="/dashboard">dashboard</a>
+          </li>
+          <li>
+            <a href="/edit">edit</a>
+          </li>
+          <li>
+            <button id="logout" class="btn-no-style">logout</button>
+          </li>
         {{else}}
-        <a href="/login">login</a>
+        <li>
+          <a href="/login">login</a>
+        </li>
         {{/if}}
+        </ul>
       </nav>
       </header>
       <main>
         {{{body}}}
       </main>
-      <footer>
-        Thanks for visiting!
-      </footer>
     </div>
 
   {{#if loggedIn}}
