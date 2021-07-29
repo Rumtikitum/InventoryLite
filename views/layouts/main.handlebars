@@ -31,3 +31,33 @@
     </div>
 
   {{#if loggedIn}}
+=======
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link href="/stylesheets/style.css" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/javascript/dashboard.js"></script>
+    <script src="/javascript/product.js"></script>
+
+  </head>
+  <body class="flex-column min-100-vh">
+    <header class="hero"></header>
+    <div
+      id="forecast"
+      class="row justify-content-center p-3 mb-2 bg-secondary text-white"
+    >
+      <h1>FULLYSTOCK</h1>
+    </div>
+
+    {{{body}}}
+  </body>
+</html>
+
