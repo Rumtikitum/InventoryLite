@@ -1,3 +1,37 @@
+{ <h1 id="forecast" class="row justify-content-center p-3 mb-2 bg-primary text-white">
+          <a>FullyStocked</a>
+        </h1>
+
+    <nav class="container-1">
+        <ul class="navbar">
+        {{#if loggedIn}}
+          <li>
+            <a href="/">home</a>
+          </li>
+          <li>
+            <a href="/dashboard">dashboard</a>
+          </li>
+          <li>
+            <a href="/edit">edit</a>
+          </li>
+          <li>
+            <button id="logout" class="btn-no-style">logout</button>
+          </li>
+        {{else}}
+        <li>
+          <a href="/login">login</a>
+        </li>
+        {{/if}}
+        </ul>
+      </nav>
+      </header>
+      <main>
+        {{{body}}}
+      </main>
+    </div>
+
+  {{#if loggedIn}}
+=======
 <html>
   <head>
     <link
@@ -26,3 +60,4 @@
     {{{body}}}
   </body>
 </html>
+
