@@ -1,55 +1,34 @@
 //Login Logic....Copy
-async function loginFormHandler(event) {
+async function editFormHandler(event) {
     event.preventDefault();
   
     //querySelector...pulling id's
-    const email = document.querySelector('#email-login').value.trim();
-    const password = document.querySelector('#password-login').value.trim();
-  
-    if (email && password) {
-      const response = await fetch('/api/users/login', {
-        method: 'post',
+    const name = document.querySelector('input[name="item_name"]').value.trim();
+    const price = document.querySelector('input[name="price"]').value.trim();
+    const id = document.querySelector('input[name="id"]').value.trim();
+    const type = document.querySelector('input[name="type_id"]').value.trim();
+    const tag = document.querySelector('input[name="tagIds"]').value.trim();
+    const amount = document.querySelector('input[name="stock"]').value.trim();
+
+    if (name && price && id && type && amount) {
+    const response = await fetch(`/api/items/${id}`, {
+        method: 'put',
         body: JSON.stringify({
-          email,
-          password
+            name,
+            price,
+            type,
+            amount
         }),
         headers: { 'Content-Type': 'application/json' }
       });
-  
+
       if (response.ok) {
         document.location.replace('/');
       } else {
         alert(response.statusText);
       }
     }
-  }
-  
-  async function signupFormHandler(event) {
-    event.preventDefault();
-  //sign up logic...query selector corresponding to #id's
-    const username = document.querySelector('#username-signup').value.trim();
-    const email = document.querySelector('#email-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
-  
-    if (username && email && password) {
-      const response = await fetch('/api/users', {
-        method: 'post',
-        body: JSON.stringify({
-          username,
-          email,
-          password
-        }),
-        headers: { 'Content-Type': 'application/json' }
-      });
-  
-      if (response.ok) {
-        document.location.replace('/');
-      } else {
-        alert(response.statusText);
-      }
-    }
-  }
+    
+
   //listening for submit button on login page
-  document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
-  
-  document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
+  const form = document.querySelector('.edit-form').addEventListener('submit', editFormHandler);
