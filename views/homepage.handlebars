@@ -1,18 +1,8 @@
-<div>You are on the homepage</div>
-<div>Here is your Table of Contents</div>
+<h3 class="alert alert-dark">Welcome! We are Fully Stocked!!</h3>
+<ul>
+    <li>We are here to make your life easier!</li>
+    <li>On your left side we have your item's displayed. We want to make it easy for you reference.</li>
+    <li>Each item has a unqiue ID when you add them and theyll be important</li>
+    <li>We make the interface easy so you can spend more time making money!!!</li>
+</ul>
 
-<!-- Loop over each object in the articles array -->
-{{#each items as |item| }}
-
-<div class="card mb-2">
-            <div class="card-body ms-3">
-                <div>hello</div>
-                
-              <h5 class="card-title bg-primary text-light p-3"><a class='text-light' href="/articles/{{id}}">{{article.title}}</a></h5>
-              <div class="card-header">
-                Posted by {{user.user_name}} on {{format_date article.createdAt}}
-              </div>
-              <p class="card-text ps-4 pt-4">{{article.content}}</p>
-            </div>
-          </div>
-{{/each}}

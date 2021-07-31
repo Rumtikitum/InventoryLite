@@ -13,9 +13,6 @@ router.get('/',async(req, res) => {
       include:[
       { model:Type,
         attributes:['type_name'],
-      },
-      { model:Tag,through:ItemTag,
-        attributes:['tag_name'],
       }
     ],
     });
@@ -34,9 +31,6 @@ router.get('/:id',async(req, res) => {
       attributes: ['id','item_name','price','stock'],
       include: [{ model: Type,
         attributes:['type_name'],
-      },
-      { model: Tag, through: ItemTag,
-        attributes:['tag_name'],
       }],
     });
     if (!itemsData) {

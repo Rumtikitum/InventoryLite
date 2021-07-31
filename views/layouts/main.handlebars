@@ -24,16 +24,16 @@
         <ul class="navbar">
         {{#if loggedIn}}
           <li>
-            <a href="/">home</a>
+            <a href="/" class="btn btn-danger" style="width: 80px;">home</a>
           </li>
           <li>
-            <a href="/edit">edit</a>
+            <a href="/edit" class="btn btn-danger" style="width: 80px;">add</a>
           </li>
           <li>
-            <a href="/remove">remove</a>
+            <a href="/remove" class="btn btn-danger" style="width: 80px;">remove</a>
           </li>
           <li>
-            <button id="logout" class="btn-no-style">logout</button>
+            <button id="logout" class="btn btn-danger" style="width: 80px;">logout</button>
           </li>
         {{else}}
         <li>
@@ -47,7 +47,7 @@
         <div class="container">
           <div class="row">
             <div class="col">
-              <h3>Table of Contents</h3>
+              <h3 class="alert alert-info">Table of Contents</h3>
             </div>
             <div class="col">
               {{{body}}}
