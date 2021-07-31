@@ -36,6 +36,7 @@ Item.init(
     },
     type_id: {
       type: DataTypes.INTEGER,
+      defaultValue: [1],
       references: {
         model: 'type',
         key: 'id',

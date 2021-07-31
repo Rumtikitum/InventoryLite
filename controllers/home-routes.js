@@ -10,27 +10,6 @@ router.get('/', (req, res) => {
       });
     })
 
-router.get('/search', (req, res) => {
-  console.log('======================');
-    res.render('search', {
-        loggedIn: req.session.loggedIn
-      });
-    })
-
-router.get('/dashboard', (req, res) => {
-  console.log('======================');
-    res.render('dashboard', {
-        loggedIn: req.session.loggedIn
-      });
-    })
-
-router.get('/search', (req, res) => {
-  console.log('======================');
-    res.render('search', {
-        loggedIn: req.session.loggedIn
-      });
-    })
-
 router.get('/edit', (req, res) => {
   console.log('======================');
     res.render('edit', {

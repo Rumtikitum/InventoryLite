@@ -34,3 +34,16 @@
   .navbar a:hover {
     background-color: #1f1f2e;
   }
+
+  .primarybody {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .right {
+    flex: 1;
+  }
+
+  .left {
+    flex: 2;
+  }
