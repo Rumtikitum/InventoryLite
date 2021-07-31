@@ -1,79 +1,26 @@
 <!--Put request-->
 
 
-<div class="container">
-    
-
- 
-<form class="edit-form">
-        <div class="row">
-      <div class="card" style="width: 70rem">
-        <div class="card-body">
-          <h5 class="card-title">INFO</h5>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1">Name:</span>
-          <input type="text" class="form-control" placeholder="Ex, Shirts" aria-label="Ex, Shirts" aria-describedby="basic-addon1" name="item_name" value="{{items.item_name}}">
-        </div>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1">Price:</span>
-          <input type="text" class="form-control" placeholder="Ex, Price" aria-label="Ex, Price" aria-describedby="basic-addon1" name="price" value="{{items.price}}">
-        </div>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1">ID:</span>
-          <input type="text" class="form-control" placeholder="Ex, 1" aria-label="Ex, 1" aria-describedby="basic-addon1" name="id" value="{{items.id}}">
-        </div>
-        </div>
-      </div>
-    </div>
-
-    
-        <div class="row">
-          <div class="card" style="width: 70rem">
-            <div class="card-body">
-              <h5 class="card-title">TYPE</h5>
-
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1">Name:</span>
-          <input type="text" class="form-control" placeholder="Ex, Shirts" aria-label="Ex, Shirts" aria-describedby="basic-addon1" name="type_id"value="{{items.type_id}}">
-        </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="row">
-          <div class="card" style="width: 70rem">
-            <div class="card-body">
-              <h5 class="card-title">TAG</h5>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1">Name:</span>
-          <input type="text" class="form-control" placeholder="Ex, Shirts" aria-label="Ex, Shirts" aria-describedby="basic-addon1" name="tagIds" value="{{items.tagIds}}">
-        </div>
-
-        <div class="row">
-          <div class="card" style="width: 70rem">
-            <div class="card-body">
-              <h5 class="card-title">Stock</h5>
-        <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon1">Amount</span>
-          <input type="text" class="form-control" placeholder="Ex, Shirts" aria-label="Ex, Shirts" aria-describedby="basic-addon1" name="stock" value="{{items.stock}}">
-        </div>
-    <div class="row">
-      <div class="card" style="width: 70rem">
-        <div class="card-body">
-          
-          <button  class= "text-white"><a href="/">CANCEL</a></button>
-          <button  class= "text-white" type="submit">SAVE</button>
-          
-        <!-- <button type="button" class="btn btn-danger">CANCEL</button>
-        <button type="button" class="btn btn-success">SAVE</button> -->
-      </div>
-      </div>
+<form class="item-form">
+  <div>
+    <label for="item_name">item:</label>
+    <input type="text" id="item_name" />
+  </div>
+  <div>
+    <label for="price">price:</label>
+    <input type="text" id="price" />
+  </div>
+  <div>
+    <label for="stock">stock:</label>
+    <input type="text" id="stock" />
+  </div>
+  <div>
+    <label for="type_id">type ID:</label>
+    <input type="text" id="type_id" />
+  </div>
+  <div>
+    <button type="submit">add</button>
+  </div>
 </form>
-
-              
-            </div>
-          </div>
-        </div>
 
 <script src="javascript/edit.js"></script>

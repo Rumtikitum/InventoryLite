@@ -1,128 +1,43 @@
-    <div class="container">
-      <div class="row m-4">
-        
-            <button type="button" class="btn btn-success center">
-              <a href= "/product">
-               Add New Product
+<!--Push request-->
 
-              </a>
-            </button>
-       
+
+<div class="container">
+<form class="edit-form">
+      <div class="row">
+      <div class="card" style="width: 70rem">
+        <div class="card-body">
+          <h5 class="card-title">Add Your Item</h5>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Name:</span>
+          <input type="text" class="form-control" placeholder="Ex, Shirts" aria-label="Ex, Shirts" aria-describedby="basic-addon1" name="item_name" value="{{items.item_name}}">
         </div>
-
-        <div class="row">
-          <div class="card" style="width: 70rem">
-            <div class="card-body">
-              <h6 class="card-title">Select type and tags</h6>
-            </div>
-          </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Price:</span>
+          <input type="text" class="form-control" placeholder="Ex, Price" aria-label="Ex, Price" aria-describedby="basic-addon1" name="price" value="{{items.price}}">
         </div>
-
-        <div class="row">
-          <div class="card" style="width: 70rem">
-            <div class="card-body">
-              <h5 class="card-title">TYPE</h5>
-
-              <span class="badge bg-light text-dark">Clothing</span>
-              <span class="badge bg-primary text-dark">Tech</span>
-              <span class="badge bg-light text-dark">Home Decor</span>
-            </div>
-          </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">ID:</span>
+          <input type="text" class="form-control" placeholder="Ex, 1" aria-label="Ex, 1" aria-describedby="basic-addon1" name="id" value="{{items.id}}">
         </div>
-
-        <div class="row">
-          <div class="card" style="width: 70rem">
-            <div class="card-body">
-              <h5 class="card-title">TAG</h5>
-
-              <span class="badge rounded-pill bg-light text-dark">color</span>
-              <span class="badge rounded-pill bg-light text-dark">size</span>
-              <span class="badge rounded-pill bg-primary text-white">new</span>
-              <span class="badge rounded-pill bg-light text-dark"
-                >handmade</span
-              >
-              <span class="badge rounded-pill bg-light text-dark">sport</span>
-              <span class="badge rounded-pill bg-light text-dark">cars</span>
-              <span class="badge rounded-pill bg-light text-dark"
-                >electric</span
-              >
-            </div>
-          </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Type:</span>
+          <input type="text" class="form-control" placeholder="Ex, 1" aria-label="Ex, Shirts" aria-describedby="basic-addon1" name="type_id"value="{{items.type_id}}">
         </div>
-
-        <div class="row">
-          <div class="card" style="width: 70rem">
-            <div class="card-body">
-              <h6 class="card-title">Results</h6>
-            </div>
-          </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Tag:</span>
+          <input type="text" class="form-control" placeholder="Ex, 1" aria-label="Ex, Shirts" aria-describedby="basic-addon1" name="tagIds" value="{{items.tagIds}}">
         </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Stock</span>
+          <input type="text" class="form-control" placeholder="Ex, 1" aria-label="Ex, Shirts" aria-describedby="basic-addon1" name="stock" value="{{items.stock}}">
+        </div>
+          <button  class= "text-white"><a href="/">CANCEL</a></button>
+          <button  class= "text-white" type="submit">SAVE</button>
 
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">Id</th>
-              <th scope="col">Name</th>
-              <th scope="col">Price</th>
-              <th scope="col">Type</th>
-              <th scope="col">Tag</th>
-              <th scope="col">Stock</th>
-              <th scope="col">Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Shirt</td>
-              <td>$108</td>
-              <td>Clothing</td>
-              <td>Fashion</td>
-              <td>
-                <button type="button" class="btn btn-success">+</button
-                ><a> 10 </a
-                ><button type="button" class="btn btn-warning">-</button>
-              </td>
-              <td>
-                <button type="button" class="btn btn-danger">Delete</button>
-                <button  class= "btn btn-warning"><a href="/home">Edit</a></button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Iphone Pro</td>
-              <td>$999</td>
-              <td>Tech</td>
-              <td>Mac</td>
-              <td>
-                <button type="button" class="btn btn-success">+</button
-                ><a> 10 </a
-                ><button type="button" class="btn btn-warning">-</button>
-              </td>
-              <td>
-                <button type="button" class="btn btn-danger">Delete</button
-                ><button  class= "btn btn-warning"><a href="/home">Edit</a></button>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Metal chair</td>
-              <td>$458</td>
-              <td>Furniture</td>
-              <td>Home Decor</td>
-              <td>
-                <button type="button" class="btn btn-success">+</button
-                ><a> 10 </a
-                ><button type="button" class="btn btn-warning">-</button>
-              </td>
-              <td>
-                <button type="button" class="btn btn-danger">Delete</button
-                ><button  class= "btn btn-warning"><a href="/home">Edit</a></button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+</form> 
+</div>
+
+<script src="javascript/edit.js"></script>
 
 
 

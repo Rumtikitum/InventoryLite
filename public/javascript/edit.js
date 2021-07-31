@@ -1,34 +1,32 @@
 //Login Logic....Copy
-async function editFormHandler(event) {
-    event.preventDefault();
-  
-    //querySelector...pulling id's
-    const name = document.querySelector('input[name="item_name"]').value.trim();
-    const price = document.querySelector('input[name="price"]').value.trim();
-    const id = document.querySelector('input[name="id"]').value.trim();
-    const type = document.querySelector('input[name="type_id"]').value.trim();
-    const tag = document.querySelector('input[name="tagIds"]').value.trim();
-    const amount = document.querySelector('input[name="stock"]').value.trim();
+async function addFormHandler(event) {
+  event.preventDefault();
+//sign up logic...query selector corresponding to #id's
+  const item_name = document.querySelector('#item_name').value.trim();
+  const price = document.querySelector('#price').value.trim();
+  const stock = document.querySelector('#stock').value.trim();
+  const type_id = document.querySelector('#type_id').value.trim();
 
-    if (name && price && id && type && amount) {
-    const response = await fetch(`/api/items/${id}`, {
-        method: 'put',
-        body: JSON.stringify({
-            name,
-            price,
-            type,
-            amount
-        }),
-        headers: { 'Content-Type': 'application/json' }
-      });
 
-      if (response.ok) {
-        document.location.replace('/');
-      } else {
-        alert(response.statusText);
-      }
+
+  if (price && item_name) {
+    const response = await fetch('api/items', {
+      method: 'post',
+      body: JSON.stringify({
+        item_name,
+        price,
+        stock,
+        type_id,
+      }),
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+    if (response.ok) {
+      document.location.replace('/');
+    } else {
+      alert(response.statusText);
     }
-    
+  }
+}
 
-  //listening for submit button on login page
-  const form = document.querySelector('.edit-form').addEventListener('submit', editFormHandler);
+document.querySelector('.item-form').addEventListener('submit', addFormHandler);

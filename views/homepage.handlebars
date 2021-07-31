@@ -1,2 +1,18 @@
 <div>You are on the homepage</div>
 <div>Here is your Table of Contents</div>
+
+<!-- Loop over each object in the articles array -->
+{{#each items as |item| }}
+
+<div class="card mb-2">
+            <div class="card-body ms-3">
+                <div>hello</div>
+                
+              <h5 class="card-title bg-primary text-light p-3"><a class='text-light' href="/articles/{{id}}">{{article.title}}</a></h5>
+              <div class="card-header">
+                Posted by {{user.user_name}} on {{format_date article.createdAt}}
+              </div>
+              <p class="card-text ps-4 pt-4">{{article.content}}</p>
+            </div>
+          </div>
+{{/each}}

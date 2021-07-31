@@ -38,7 +38,7 @@ router.get('/edit', (req, res) => {
       });
     })
 
-router.get('/delete', (req, res) => {
+router.get('/remove', (req, res) => {
   console.log('======================');
     res.render('remove', {
         loggedIn: req.session.loggedIn
