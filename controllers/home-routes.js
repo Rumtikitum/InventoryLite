@@ -13,14 +13,13 @@ router.get('/', async (req, res) => {
 
 router.get('/typetable', async (req, res) => {
     try {
-      // Get all items and JOIN with user data
       const typeData = await Type.findAll();
       // Serialize data so the template can read it
       const types = typeData.map((type) => type.get({ plain: true }));
   
       // Pass serialized data and session flag into template
       res.render('typetable', { 
-        logged_in: req.session.logged_in,
+        loggedIn: req.session.loggedIn,
         types, 
       });
     } catch (err) {
