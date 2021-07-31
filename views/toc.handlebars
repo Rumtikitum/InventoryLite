@@ -1,7 +1,5 @@
             <div class="col">
-              <h1 class="alert alert-info">Table of Contents</h1>
-              <h3 class="alert alert-danger">Items</h3>
-
+              <h1 class="alert alert-info">ID Types</h1>
               {{#each items as |item| }}
               <li><strong>Id: {{item.id}} </strong><strong>Name: </strong>{{item.item_name}}, price: {{item.price}}, stock: {{item.stock}}, type: {{type.type_name}}</li>
 
@@ -11,15 +9,5 @@
                 </li>
               {{/each}}
 
-              <h3 class="alert alert-danger">Types By ID</h3>
 
-              {{#each types as |type| }}
-              <li><strong>Id: {{type.id}} </strong><strong>Name: </strong>{{type.type_name}}</li>
-
-              {{else}}
-                <li>
-                  nothing here
-                </li>
-              {{/each}}
-            </div>
 

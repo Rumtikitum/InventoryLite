@@ -4,19 +4,29 @@ const sequelize = require('../config/connection');
 //const { Post, User, Comment, Vote } = require('../models');
 
 // get all posts for homepage
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
   console.log('======================');
     res.render('homepage', {
         loggedIn: req.session.loggedIn
       });
     })
 
-router.get('/typetable', (req, res) => {
-  console.log('======================');
-    res.render('typetable', {
-        loggedIn: req.session.loggedIn
+router.get('/typetable', async (req, res) => {
+    try {
+      // Get all items and JOIN with user data
+      const typeData = await Type.findAll();
+      // Serialize data so the template can read it
+      const types = typeData.map((type) => type.get({ plain: true }));
+  
+      // Pass serialized data and session flag into template
+      res.render('typetable', { 
+        logged_in: req.session.logged_in,
+        types, 
       });
-    })
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 
 router.get('/edit', (req, res) => {
   console.log('======================');
