@@ -10,42 +10,43 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   </head>
 
   <body>
     <div class="wrapper">
       <header>
         <h1 id="forecast" class="row justify-content-center p-3 mb-2 bg-primary text-white">
-          <a>FullyStocked</a>
+          <i class="fas fa-store-alt" style="margin-right: 5px;"></i>  FullyStocked
         </h1>
 
     <nav class="container-1">
         <ul class="navbar">
         {{#if loggedIn}}
           <li>
-            <a href="/" class="btn btn-danger" style="width: 80px;">home</a>
+            <a href="/" class="btn btn-info" style="width: 80px;">home</a>
           </li>
           <li>
-            <a href="/typetable" class="btn btn-danger" style="width: 80px;">type ID</a>
+            <a href="/toc" class="btn btn-info" style="width: 80px;">toc</a>
           </li>
           <li>
-            <a href="/edit" class="btn btn-danger" style="width: 80px;">add</a>
+            <a href="/typetable" class="btn btn-info" style="width: 80px;">type ID</a>
           </li>
           <li>
-            <a href="/toc" class="btn btn-danger" style="width: 80px;">toc</a>
+            <a href="/edit" class="btn btn-info" style="width: 80px;">add</a>
           </li>
           <li>
-            <a href="/addtype" class="btn btn-danger" style="width: 80px;">+type</a>
+            <a href="/addtype" class="btn btn-info" style="width: 80px;">+type</a>
           </li>
           <li>
-            <a href="/remove" class="btn btn-danger" style="width: 80px;">remove</a>
+            <a href="/remove" class="btn btn-info" style="width: 80px;">remove</a>
           </li>
           <li>
-            <button id="logout" class="btn btn-danger" style="width: 80px;">logout</button>
+            <button id="logout" class="btn btn-info" style="width: 80px;">logout</button>
           </li>
         {{else}}
         <li>
-          <a href="/login" class="btn btn-danger">login</a>
+          <a href="/login" class="btn btn-info">login</a>
         </li>
         {{/if}}
         </ul>
