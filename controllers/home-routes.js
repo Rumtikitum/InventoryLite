@@ -74,7 +74,7 @@ router.get('/toc', async (req, res) => {
 
     // Pass serialized data and session flag into template
     res.render('toc', { 
-      logged_in: req.session.logged_in,
+      loggedIn: req.session.loggedIn,
       items, 
     });
   } catch (err) {
