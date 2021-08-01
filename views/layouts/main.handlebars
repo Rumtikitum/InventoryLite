@@ -11,6 +11,7 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css"/> 
   </head>
 
   <body>
@@ -19,7 +20,12 @@
         <h1 id="forecast" class="row justify-content-center p-3 mb-2 bg-primary text-white">
           <i class="fas fa-store-alt" style="margin-right: 5px;"></i>  FullyStocked
         </h1>
-
+<div id="boxes">
+        <div class="box red"></div>
+        <div class="box blue"></div>
+        <div class="box green"></div>
+        <div class="box cyan"></div>
+    </div>
     <nav class="container-1">
         <ul class="navbar">
         {{#if loggedIn}}
@@ -67,7 +73,31 @@
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}
-
+        <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js">
+        </script>
+  <script>
+             anime ({
+    targets: 'div.box',
+    translateY: [
+        {value: 200, duration: 500},
+        {value:0, duration: 800}  
+    ],
+    rotate: {
+    value: '1turn',
+    },
+    borderRadius: 50,
+    direction: 'alternate',
+    easing: 'easeInOutQuad',
+    delay: function() { return anime.random(0, 1000); },
+    // autoplay: false,
+    loop: true,
+    elasticity: 200 
+   
+}); 
+playPause.play();
+        </script>
+        
   </body>
 
 </html>
