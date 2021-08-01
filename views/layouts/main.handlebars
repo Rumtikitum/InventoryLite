@@ -1,63 +1,73 @@
-{ <h1 id="forecast" class="row justify-content-center p-3 mb-2 bg-primary text-white">
-          <a>FullyStocked</a>
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FullyStocked</title>
+    <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 id="forecast" class="row justify-content-center p-3 mb-2 bg-primary text-white">
+          <i class="fas fa-store-alt" style="margin-right: 5px;"></i>  FullyStocked
         </h1>
 
     <nav class="container-1">
         <ul class="navbar">
         {{#if loggedIn}}
           <li>
-            <a href="/">home</a>
+            <a href="/" class="btn btn-info" style="width: 80px;">home</a>
           </li>
           <li>
-            <a href="/dashboard">dashboard</a>
+            <a href="/toc" class="btn btn-info" style="width: 80px;">toc</a>
           </li>
           <li>
-            <a href="/edit">edit</a>
+            <a href="/typetable" class="btn btn-info" style="width: 80px;">type ID</a>
           </li>
           <li>
-            <button id="logout" class="btn-no-style">logout</button>
+            <a href="/edit" class="btn btn-info" style="width: 80px;">add</a>
+          </li>
+          <li>
+            <a href="/addtype" class="btn btn-info" style="width: 80px;">+type</a>
+          </li>
+          <li>
+            <a href="/remove" class="btn btn-info" style="width: 80px;">remove</a>
+          </li>
+          <li>
+            <button id="logout" class="btn btn-info" style="width: 80px;">logout</button>
           </li>
         {{else}}
         <li>
-          <a href="/login">login</a>
+          <a href="/login" class="btn btn-info">login</a>
         </li>
         {{/if}}
         </ul>
       </nav>
       </header>
       <main>
-        {{{body}}}
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              {{{body}}}
+            </div>
+          </div>
+        </div>
+
       </main>
     </div>
 
   {{#if loggedIn}}
-=======
-<html>
-  <head>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link href="/stylesheets/style.css" rel="stylesheet" />
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script src="/javascript/dashboard.js"></script>
-    <script src="/javascript/product.js"></script>
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
 
-  </head>
-  <body class="flex-column min-100-vh">
-    <header class="hero"></header>
-    <div
-      id="forecast"
-      class="row justify-content-center p-3 mb-2 bg-secondary text-white"
-    >
-      <h1>FULLYSTOCK</h1>
-    </div>
-
-    {{{body}}}
   </body>
-</html>
 
+</html>
