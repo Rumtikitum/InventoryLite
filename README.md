@@ -17,7 +17,7 @@
 - Streamlining inventory management in new and/or small businesses is key to successful operations.
 - Yet, inventory management software can come at a hefty price.
 - FullyStocked allows you or your employee create a Username + Login. Each User can then Add and Delete inventory
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+
 
 
 ## Technologies Used
